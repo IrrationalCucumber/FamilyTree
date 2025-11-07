@@ -16,21 +16,49 @@
             width: 100%;
             height: 100%;
         }
+        .family__wrapp{
+            position: relative;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            border: 2px dashed blue;
+        }
+        .right__block{
+            border: 2px solid green;
+            display: flex;
+            flex-direction: column;
+            align-items:end;
+        }
+        .left__block{
+            position: relative;
+            width: 50%;
+            border: 2px solid red;
+            display: flex;
+            flex-direction: column;
+            align-items:start;
+        }
     </style>
     <h1 class="title">Potot-Cajeta Family Tree</h1>
     <div class="tree__wrapp">
         <img src="Assets/FamilyTree.jpg"  alt="FamilyTree">
-        <div>
+        <div class="family__wrapp">
             <!--center-->
             <div><a href="Family.html">Opaon</a></div>
             <!--rigth-->
-            <div>Potot</div> 
-            <div>Soroño</div>
-            <div>Ochea</div>
+            <div class="right__block">
+                <div>Potot</div> 
+                <div>Soroño</div>
+                <div>Ochea</div>
+            </div>
+            
             <!--Left-->
-            <div>Novicio</div>
-            <div>Ontong</div>
-            <div>Potot</div>
+            <div class="left__block">
+                <div>Novicio</div>
+                <div>Ontong</div>
+                <div>Potot</div>
+            </div>
+            
             <!---center-->
             <div>Benjamin & Leoncita</div>
         </div>
