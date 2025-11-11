@@ -119,6 +119,7 @@ function myFunction() {
   //window.print(); // print the current page
 }
 
-function goFamily(){
-
+function goToFamily(fam){
+    const x = fam
+    window.alert("vaiable: "+ x)
 }
