@@ -1,7 +1,100 @@
 [
     {
-        "Father" :"Benjamin",
-        "Mother" : "Leoncita",
-        "Children" : "Benjamin Jr, Lilibeth, Maria Fe, Grace, Luciela, Ophelia, Joy"
+        "Potot":
+        {
+            "Father":"Benjamin",
+            "Mother": "Leoncita",
+            "Children":{
+                "Benjamin Jr":{
+                    "Father":"Benjamin Jr",
+                    "Mother": "Maria F",
+                    "Children":"Marvin, Rowen, Jerwelyn, Kevin, Franklin, Lovelyn"
+                },
+                "Lilibeth":{
+                    "Father": "William",
+                    "Mother": "Lilibeth",
+                    "Children": "Janessa, Jennelyn, William Jr, Jeycel, Julia",
+                    "Extension": 
+                        {
+                            "Barrientos":
+                            {
+                                "Father": "Clifford",
+                                "Mother": "Janessa",
+                                "Children": "Aleeya, Liam, Aya"
+                            },
+                            "Jennelyn":
+                            {
+                                "Father": "Jojo",
+                                "Mother": "Jennelyn",
+                                "Children": "Nicole, 2nd Daughter"
+                            },
+                            "Ochea Jr":{
+                                "Father": "William Jr",
+                                "Mother": "Cathy",
+                                "Children": "1st Daughter,"
+                            },
+                            "Jeycel":{
+                                "Father": "Charles",
+                                "Mother": "Jeycel",
+                                "Children": "1st Son, 2nd Son"
+                            }
+                        }
+                },
+                "Maria Fe":{
+                    "Father" :"Mario",
+                    "Mother" : "Maria Fe",
+                    "Children" : "StepheMar, Shelow May, Shenapril, Saever Jun",
+                    "Extension": 
+                        {
+                            "Ontong":
+                            {
+                                "Father": "Stephemar",
+                                "Mother": "Jane",
+                                "Children": "Madi, 2nd Daughter, Son"
+                            },
+                            "Shenapril":{
+                                "Childred": "Travis, Sasa, 2nd Son"
+                            }
+                            
+                        }
+                },
+                "Grace":{
+                    "Father" :"Wilfredo",
+                    "Mother" : "Grace",
+                    "Children" : "Adrean Paul, Allyssa Mae",
+                    "Extension": 
+                        {
+                            "Aredidon":
+                            {
+                                "Father": "Jushua",
+                                "Mother": "Allyssa",
+                                "Children": "Zhyleen Haichee"
+                            }
+                        }
+                },
+                 "Luciela":{
+                    "Father" :"Dionecio",
+                    "Mother" : "Luciela",
+                    "Children" : "Vincent Christian, Vanessa Faith, Verdex Jekyle",
+                    "Extension": 
+                        {
+                            "Novicio":
+                            {
+                                "Father": "Vincent Christian",
+                                "Mother": "Weena",
+                                "Children": "Severus, Stephen jon, Samantha"
+                            }
+                        }
+                    
+                }, 
+                 "Joy":{
+                    "Father" :"Eric",
+                    "Mother" : "Joy",
+                    "Children" : "Erica Joyce, Mia Mae, Ella"
+                },
+                "Ophelia": "Ophelia"
+            }
+        }
     }
+    
 ]
