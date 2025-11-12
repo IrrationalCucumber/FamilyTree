@@ -11,14 +11,16 @@ const tree = {
             "Mother": "Leoncita",
             "Children":{
                 "Benjamin Jr":{
+                    "Surname": "Potot",
                     "Father":"Benjamin Jr",
                     "Mother": "Maria F",
-                    "Children":"Marvin, Rowen, Jerwelyn, Kevin, Franklin, Lovelyn"
+                    "Children":["Marvin", "Rowen", "Lauren", "Jennelyn", "Kevin", "Franklin", "Mauren", "Lialyn",  "Lovelyn"]
                 },
                 "Lilibeth":{
+                    "Surname": "Ochea",
                     "Father": "William",
                     "Mother": "Lilibeth",
-                    "Children": "Janessa, Jennelyn, William Jr, Jeycel, Julia",
+                    "Children": ["Janessa", "Jennelyn", "William Jr", "Jeycel", "Julia"],
                     "Extension": 
                         {
                             "Barrientos":
@@ -46,9 +48,10 @@ const tree = {
                         }
                 },
                 "Maria Fe":{
+                    "Surname": "Ontong",
                     "Father" :"Mario",
                     "Mother" : "Maria Fe",
-                    "Children" : "StepheMar, Shelow May, Shenapril, Saever Jun",
+                    "Children" : ["StepheMar", "ShelowMay", "ShenaPril", "SaeverJun"],
                     "Extension": 
                         {
                             "Ontong":
@@ -79,9 +82,10 @@ const tree = {
                         }
                 },
                  "Luciela":{
+                    "Surname": "Novicio",
                     "Father" :"Dionecio",
                     "Mother" : "Luciela",
-                    "Children" : "Vincent Christian, Vanessa Faith, Verdex Jekyle",
+                    "Children" : ["Vincent Christian", "Vanessa Faith", "Verdex Jekyle"],
                     "Extension": 
                         {
                             "Novicio":
@@ -94,9 +98,10 @@ const tree = {
                     
                 }, 
                  "Joy":{
+                    "Surname": "Opaon",
                     "Father" :"Eric",
                     "Mother" : "Joy",
-                    "Children" : "Erica Joyce, Mia Mae, Ella"
+                    "Children" : ["Erica Joyce", "Mia Mae", "Ella"]
                 },
                 "Ophelia": "Ophelia"
             }
@@ -122,4 +127,5 @@ function myFunction() {
 function goToFamily(fam){
     const x = fam
     window.alert("vaiable: "+ x)
+    
 }
