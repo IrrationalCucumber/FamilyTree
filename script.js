@@ -111,14 +111,23 @@ const tree = {
 
 
 
-function myFunction() {
+function myFunction(passedName) {
+    const qs  = window.location.search; // get from url
+    const params = new URLSearchParams(qs) //decode value from url
+    let name = params.get('fam')  // store value
+    name = name.toLowerCase(); 
+    
+    //alert(name);
+    if(name == "grace"){
+        document.getElementById("fam").innerHTML = tree.Potot.Children.Grace.Surname +" Family";
+        document.getElementById("f").innerHTML = tree.Potot.Children.Grace.Father;
+        document.getElementById("m").innerHTML = tree.Potot.Children.Grace.Mother;
+        document.getElementById("ch1").innerHTML = tree.Potot.Children.Grace.Children[0];
+        document.getElementById("ch2").innerHTML = tree.Potot.Children.Grace.Children[1];
+        //console.log(tree);
+    }
   //document.getElementById("demo").innerHTML = "Hello";
-  document.getElementById("fam").innerHTML = tree.Potot.Children.Grace.Surname +" Family";
-  document.getElementById("f").innerHTML = tree.Potot.Children.Grace.Father;
-  document.getElementById("m").innerHTML = tree.Potot.Children.Grace.Mother;
-  document.getElementById("ch1").innerHTML = tree.Potot.Children.Grace.Children[0];
-  document.getElementById("ch2").innerHTML = tree.Potot.Children.Grace.Children[1];
-  console.log(tree);
+  
   
   //window.alert("Hello JavaScript!"); // response to button click
   //window.print(); // print the current page
@@ -126,6 +135,7 @@ function myFunction() {
 
 function goToFamily(fam){
     const x = fam
-    window.alert("vaiable: "+ x)
-    
+    // window.alert("vaiable: "+ x)
+    document.location='Family.html?fam='+ encodeURIComponent(x) //go to Family page
+    // apply myFunction
 }
