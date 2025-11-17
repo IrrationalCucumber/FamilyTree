@@ -25,25 +25,29 @@ const tree = {
                         {
                             "Barrientos":
                             {
+                                "Surname": "Barrientos",
                                 "Father": "Clifford",
                                 "Mother": "Janessa",
                                 "Children": "Aleeya, Liam, Aya"
                             },
                             "Jennelyn":
                             {
+                                "Surname": "Mata",
                                 "Father": "Jojo",
                                 "Mother": "Jennelyn",
                                 "Children": "Nicole, 2nd Daughter"
                             },
                             "Ochea Jr":{
+                                "Surname": "Ochea",
                                 "Father": "William Jr",
                                 "Mother": "Cathy",
                                 "Children": "1st Daughter,"
                             },
                             "Jeycel":{
+                                "Surname": "",
                                 "Father": "Charles",
                                 "Mother": "Jeycel",
-                                "Children": "1st Son, 2nd Son"
+                                "Children": "1st Son, Noah"
                             }
                         }
                 },
@@ -108,7 +112,6 @@ const tree = {
         }
     }
     
-
 
 
 function myFunction(passedName) {
