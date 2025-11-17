@@ -10,7 +10,7 @@ const tree = {
             "Father":"Benjamin",
             "Mother": "Leoncita",
             "Children":{
-                "Benjamin Jr":{
+                "BenjaminJr":{
                     "Surname": "Potot",
                     "Father":"Benjamin Jr",
                     "Mother": "Maria F",
@@ -51,7 +51,7 @@ const tree = {
                             }
                         }
                 },
-                "Maria Fe":{
+                "MariaFe":{
                     "Surname": "Ontong",
                     "Father" :"Mario",
                     "Mother" : "Maria Fe",
@@ -121,16 +121,38 @@ function myFunction(passedName) {
     name = name.toLowerCase(); 
     
     //alert(name);
-    if(name == "grace"){
-        document.getElementById("fam").innerHTML = tree.Potot.Children.Grace.Surname +" Family";
-        document.getElementById("f").innerHTML = tree.Potot.Children.Grace.Father;
-        document.getElementById("m").innerHTML = tree.Potot.Children.Grace.Mother;
-        document.getElementById("ch1").innerHTML = tree.Potot.Children.Grace.Children[0];
-        document.getElementById("ch2").innerHTML = tree.Potot.Children.Grace.Children[1];
-        //console.log(tree);
+    switch(name){
+        case "benJr":
+            document.getElementById("fam").innerHTML = tree.Potot.Children.BenjaminJr.Surname +" Family";
+            break;
+        case "lilibeth":
+            document.getElementById("fam").innerHTML = tree.Potot.Children.Lilibeth.Surname +" Family";
+            break;
+        case "mariaFe":
+            document.getElementById("fam").innerHTML = tree.Potot.Children.MariaFe.Surname +" Family";
+            break;
+        case "grace":
+            document.getElementById("fam").innerHTML = tree.Potot.Children.Grace.Surname +" Family";
+            break;
+        case "ophelia":
+            document.getElementById("fam").innerHTML = tree.Potot.Children.Ophelia.Surname +" Family";
+            break;
+        case "luciela":
+            document.getElementById("fam").innerHTML = tree.Potot.Children.Luciela.Surname +" Family";
+            break;
+        case "joy":
+            document.getElementById("fam").innerHTML = tree.Potot.Children.Joy.Surname +" Family";
+            break;
+        
     }
-  //document.getElementById("demo").innerHTML = "Hello";
-  
+    // if(name == "grace"){
+    //     document.getElementById("fam").innerHTML = tree.Potot.Children.Grace.Surname +" Family";
+    //     document.getElementById("f").innerHTML = tree.Potot.Children.Grace.Father;
+    //     document.getElementById("m").innerHTML = tree.Potot.Children.Grace.Mother;
+    //     document.getElementById("ch1").innerHTML = tree.Potot.Children.Grace.Children[0];
+    //     document.getElementById("ch2").innerHTML = tree.Potot.Children.Grace.Children[1];
+    //     //console.log(tree);
+    // }
   
   //window.alert("Hello JavaScript!"); // response to button click
   //window.print(); // print the current page
