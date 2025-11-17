@@ -107,7 +107,8 @@ const tree = {
                     "Mother" : "Joy",
                     "Children" : ["Erica Joyce", "Mia Mae", "Ella"]
                 },
-                "Ophelia": "Ophelia"
+                "Ophelia": "Ophelia Potot"
+
             }
         }
     }
@@ -122,20 +123,22 @@ function myFunction(passedName) {
     
     //alert(name);
     switch(name){
-        case "benJr":
+        case "jr":
             document.getElementById("fam").innerHTML = tree.Potot.Children.BenjaminJr.Surname +" Family";
+            console.log(tree);
+            
             break;
         case "lilibeth":
             document.getElementById("fam").innerHTML = tree.Potot.Children.Lilibeth.Surname +" Family";
             break;
-        case "mariaFe":
+        case "flor":
             document.getElementById("fam").innerHTML = tree.Potot.Children.MariaFe.Surname +" Family";
             break;
         case "grace":
             document.getElementById("fam").innerHTML = tree.Potot.Children.Grace.Surname +" Family";
             break;
         case "ophelia":
-            document.getElementById("fam").innerHTML = tree.Potot.Children.Ophelia.Surname +" Family";
+            document.getElementById("fam").innerHTML = tree.Potot.Children.Ophelia;
             break;
         case "luciela":
             document.getElementById("fam").innerHTML = tree.Potot.Children.Luciela.Surname +" Family";
