@@ -28,32 +28,32 @@ const tree = {
         Father: "William",
         Mother: "Lilibeth",
         Children: ["Janessa", "Jennelyn", "William Jr", "Jeycel", "Julia"],
-        Extension: {
-          Barrientos: {
+        Extension: [
+          {
             Surname: "Barrientos",
             Father: "Clifford",
             Mother: "Janessa",
             Children: "Aleeya, Liam, Aya",
           },
-          Jennelyn: {
+           {
             Surname: "Mata",
             Father: "Jojo",
             Mother: "Jennelyn",
             Children: "Nicole, 2nd Daughter",
           },
-          "Ochea Jr": {
+          {
             Surname: "Ochea",
             Father: "William Jr",
             Mother: "Cathy",
             Children: "1st Daughter,",
           },
-          Jeycel: {
+           {
             Surname: "",
             Father: "Charles",
             Mother: "Jeycel",
             Children: "1st Son, Noah",
           },
-        },
+        ],
       },
       MariaFe: {
         Surname: "Ontong",
@@ -119,8 +119,6 @@ function myFunction(passedName) {
     case "jr":
       document.getElementById("fam").innerHTML =
         tree.Potot.Children.BenjaminJr.Surname + " Family";
-      console.log(tree);
-
       break;
     case "lilibeth":
       document.getElementById("fam").innerHTML =
@@ -135,8 +133,8 @@ function myFunction(passedName) {
         tree.Potot.Children.Grace.Surname + " Family";
       document.getElementById("f").innerHTML = tree.Potot.Children.Grace.Father;
       document.getElementById("m").innerHTML = tree.Potot.Children.Grace.Mother;
-      document.getElementById("ch1").innerHTML = tree.Potot.Children.Grace.Children[0];
-      document.getElementById("ch2").innerHTML = tree.Potot.Children.Grace.Children[1];
+      document.getElementById("ch1").innerHTML = tree.Potot.Children.Grace.Children[1];
+      document.getElementById("ch2").innerHTML = tree.Potot.Children.Grace.Children[0];
       document.getElementById("gh").innerHTML = tree.Potot.Children.Grace.Extension[0].Father
       document.getElementById("gch1").innerHTML = tree.Potot.Children.Grace.Extension[0].Children
       break;
