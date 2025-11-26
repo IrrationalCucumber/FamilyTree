@@ -6,8 +6,8 @@ const tree = {
   Potot: {
     Father: "Benjamin",
     Mother: "Leoncita",
-    Children: {
-      BenjaminJr: {
+    Children: [
+       {
         Surname: "Potot",
         Father: "Benjamin Jr",
         Mother: "Maria F",
@@ -23,7 +23,7 @@ const tree = {
           "Lovelyn",
         ],
       },
-      Lilibeth: {
+     {
         Surname: "Ochea",
         Father: "William",
         Mother: "Lilibeth",
@@ -55,7 +55,7 @@ const tree = {
           },
         ],
       },
-      MariaFe: {
+       {
         Surname: "Ontong",
         Father: "Mario",
         Mother: "Maria Fe",
@@ -71,7 +71,7 @@ const tree = {
           },
         },
       },
-      Grace: {
+     {
         Surname: "Sorono",
         Father: "Wilfredo",
         Mother: "Grace",
@@ -84,7 +84,7 @@ const tree = {
           
         }],
       },
-      Luciela: {
+       {
         Surname: "Novicio",
         Father: "Dionecio",
         Mother: "Luciela",
@@ -97,14 +97,14 @@ const tree = {
           },
         },
       },
-      Joy: {
+    {
         Surname: "Opaon",
         Father: "Eric",
         Mother: "Joy",
         Children: ["Erica Joyce", "Mia Mae", "Ella"],
       },
-      Ophelia: "Ophelia Potot",
-    },
+     "Ophelia Potot",
+    ],
   },
 };
 
@@ -118,36 +118,36 @@ function myFunction(passedName) {
   switch (name) {
     case "jr":
       document.getElementById("fam").innerHTML =
-        tree.Potot.Children.BenjaminJr.Surname + " Family";
+        tree.Potot.Children[0].Surname + " Family";
       break;
     case "lilibeth":
       document.getElementById("fam").innerHTML =
-        tree.Potot.Children.Lilibeth.Surname + " Family";
+        tree.Potot.Children[1].Surname + " Family";
       break;
     case "flor":
       document.getElementById("fam").innerHTML =
-        tree.Potot.Children.MariaFe.Surname + " Family";
+        tree.Potot.Children[2].Surname + " Family";
       break;
     case "grace":
       document.getElementById("fam").innerHTML =
-        tree.Potot.Children.Grace.Surname + " Family";
-      document.getElementById("f").innerHTML = tree.Potot.Children.Grace.Father;
-      document.getElementById("m").innerHTML = tree.Potot.Children.Grace.Mother;
-      document.getElementById("ch1").innerHTML = tree.Potot.Children.Grace.Children[1];
-      document.getElementById("ch2").innerHTML = tree.Potot.Children.Grace.Children[0];
-      document.getElementById("gh").innerHTML = tree.Potot.Children.Grace.Extension[0].Father
-      document.getElementById("gch1").innerHTML = tree.Potot.Children.Grace.Extension[0].Children
+        tree.Potot.Children[3].Surname + " Family";
+      document.getElementById("f").innerHTML = tree.Potot.Children[3].Father;
+      document.getElementById("m").innerHTML = tree.Potot.Children[3].Mother;
+      document.getElementById("ch1").innerHTML = tree.Potot.Children[3].Children[1];
+      document.getElementById("ch2").innerHTML = tree.Potot.Children[3].Children[0];
+      document.getElementById("gh").innerHTML = tree.Potot.Children[3].Extension[0].Father
+      document.getElementById("gch1").innerHTML = tree.Potot.Children[3].Extension[0].Children
       break;
     case "ophelia":
-      document.getElementById("fam").innerHTML = tree.Potot.Children.Ophelia;
+      document.getElementById("fam").innerHTML = tree.Potot.Children[6];
       break;
     case "luciela":
       document.getElementById("fam").innerHTML =
-        tree.Potot.Children.Luciela.Surname + " Family";
+        tree.Potot.Children[4].Surname + " Family";
       break;
     case "joy":
       document.getElementById("fam").innerHTML =
-        tree.Potot.Children.Joy.Surname + " Family";
+        tree.Potot.Children[5].Surname + " Family";
       break;
   }
   // if(name == "grace"){
