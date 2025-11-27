@@ -2,7 +2,7 @@
   border: 2px solid black;
 }
 
-.tree__wrapp{
+.tree__wrapp {
   background: url("./Assets/FamilyTree.jpg") no-repeat center;
   background-size: cover;
   background-attachment: fixed;
@@ -13,8 +13,6 @@
 
 .family__wrapp {
   position: relative;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   height: 100%;
 }
@@ -51,7 +49,7 @@
   padding: 5px 0;
 }
 
-.center__block__root{
+.center__block__root {
   position: relative;
   width: 50%;
   display: flex;
@@ -62,23 +60,25 @@
   padding: 5px 0;
 }
 
-.text__wrapp, .text__wrapp__upperLeft,
- .text__wrapp__lowerLeft, .text__wrapp__upperRight,
- .text__wrapp__lowerRight {
+.text__wrapp,
+.text__wrapp__upperLeft,
+.text__wrapp__lowerLeft,
+.text__wrapp__upperRight,
+.text__wrapp__lowerRight {
   margin: auto;
   padding: 10px;
   position: relative;
 }
 
-.text__wrapp__upperLeft, .text__wrapp__lowerLeft{
+.text__wrapp__upperLeft,
+.text__wrapp__lowerLeft {
   left: 8rem;
 }
 
 .text__wrapp__upperRight,
- .text__wrapp__lowerRight{
+.text__wrapp__lowerRight {
   right: 8rem;
- }
-
+}
 
 .family__text {
   padding: 4px;
@@ -89,13 +89,12 @@
 }
 .family__text__center,
 .family__text {
-  border: 5px solid rgb(21, 153, 39);
-  background-color: rgb(40, 172, 40); 
+  background-color: rgb(40, 172, 40);
   color: #ffff;
   border-radius: 50%;
 }
 
-.family__text__center{
+.family__text__center {
   height: 4rem;
   display: flex;
   justify-content: center;
@@ -104,20 +103,70 @@
   padding: 4px;
 }
 
-.text__center__root{
+.text__center__root {
   display: flex;
   flex-direction: row;
+  text-align: center;
   justify-content: center;
   align-items: center;
   margin: auto;
   color: #f19447f3;
   font: 40px bold;
   text-shadow: 0 0 30px rgb(204, 207, 221);
-  width: 50%;
+  width: 55%;
   height: 4rem;
 }
 
-.family__text:hover, .family__text__center:hover{
-  background-color:#ffff;
-  color:rgb(40, 172, 40);
+.family__text:hover,
+.family__text__center:hover {
+  background-color: #ffff;
+  color: rgb(40, 172, 40);
+}
+
+@media screen and (max-height: 480px) {
+  .tree__wrapp {
+    height: 100%;
+  }
+
+  .text__wrapp,
+  .text__wrapp__upperLeft,
+  .text__wrapp__lowerLeft,
+  .text__wrapp__upperRight,
+  .text__wrapp__lowerRight {
+    margin: auto;
+    padding: 2px;
+    position: relative;
+  }
+  .text__wrapp__upperLeft,
+  .text__wrapp__lowerLeft {
+    left: 0;
+  }
+
+  .text__wrapp__upperRight,
+  .text__wrapp__lowerRight {
+    right: 0;
+  }
+
+  .family__text {
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+  }
+
+  .family__text__center {
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    padding: 4px;
+  }
+
+  .text__center__root {
+    color: #f19447f3;
+    font: 20px bold;
+    text-shadow: 0 0 30px rgb(204, 207, 221);
+  }
 }
