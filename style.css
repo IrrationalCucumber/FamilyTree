@@ -17,8 +17,6 @@
   justify-content: center;
   width: 100%;
   height: 100%;
-  border: 2px dashed blue;
-  
 }
 
 .block__wrapp {
@@ -27,7 +25,6 @@
 }
 
 .right__block {
-  border: 2px solid green;
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -39,7 +36,6 @@
   position: relative;
   width: 50%;
   height: 100%;
-  border: 2px solid red;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -114,9 +110,10 @@
   justify-content: center;
   align-items: center;
   margin: auto;
-  color: #dd6c10;
-  font: 50px bold;
-  text-shadow: 0 0 30px rgb(48, 76, 231);
+  color: #f19447f3;
+  font: 40px bold;
+  text-shadow: 0 0 30px rgb(204, 207, 221);
   width: 50%;
   height: 4rem;
 }
+
