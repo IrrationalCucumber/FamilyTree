@@ -117,3 +117,7 @@
   height: 4rem;
 }
 
+.family__text:hover, .family__text__center:hover{
+  background-color:#ffff;
+  color:rgb(40, 172, 40);
+}
