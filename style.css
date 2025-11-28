@@ -88,10 +88,10 @@
   height: 5rem;
 }
 .family__text__center,
-.family__text {
+.family__text, .family__text__centerLeft {
   background-color: rgb(40, 172, 40);
   color: #ffff;
-  border-radius: 50%;
+  border-radius: 50% 0;
 }
 
 .family__text__center {
@@ -123,9 +123,9 @@
   color: rgb(40, 172, 40);
 }
 
-@media screen and (max-height: 480px) {
+@media screen and (max-width: 915px) {
   .tree__wrapp {
-    height: 100%;
+    height: 15rem;
   }
 
   .text__wrapp,
@@ -139,12 +139,12 @@
   }
   .text__wrapp__upperLeft,
   .text__wrapp__lowerLeft {
-    left: 0;
+    left: 2;
   }
 
   .text__wrapp__upperRight,
   .text__wrapp__lowerRight {
-    right: 0;
+    right: 2;
   }
 
   .family__text {
@@ -152,7 +152,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 5rem;
+    height: 4rem;
   }
 
   .family__text__center {
@@ -160,7 +160,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 25%;
+    width: 15%;
     padding: 4px;
   }
 
