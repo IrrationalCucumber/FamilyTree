@@ -80,7 +80,8 @@
   right: 8rem;
 }
 
-.family__text {
+.family__text,
+.family__text__left {
   padding: 4px;
   display: flex;
   justify-content: center;
@@ -88,11 +89,18 @@
   height: 5rem;
 }
 .family__text__center,
-.family__text, .family__text__centerLeft {
+.family__text{
   background-color: rgb(40, 172, 40);
   color: #ffff;
   border-radius: 50% 0;
 }
+
+.family__text__left {
+  background-color: rgb(40, 172, 40);
+  color: #ffff;
+  border-radius: 0 50%;
+}
+
 
 .family__text__center {
   height: 4rem;
@@ -118,7 +126,8 @@
 }
 
 .family__text:hover,
-.family__text__center:hover {
+.family__text__center:hover,
+.family__text__left:hover {
   background-color: #ffff;
   color: rgb(40, 172, 40);
 }
@@ -147,7 +156,8 @@
     right: 2;
   }
 
-  .family__text {
+  .family__text,
+  .family__text__left {
     padding: 2px;
     display: flex;
     justify-content: center;
