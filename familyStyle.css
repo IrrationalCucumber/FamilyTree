@@ -1,5 +1,22 @@
 body {
   text-align: center;
+  margin: 0;
+}
+
+nav{
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    background: blue;
+    border: 2px solid blue;
+}
+
+nav:hover{
+    background: #ffff;
+    color: blue;
+    border: 2px solid blue;
 }
 
 .family__banner {
