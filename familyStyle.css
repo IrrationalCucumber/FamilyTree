@@ -1,3 +1,87 @@
-body{
-    text-align: center;
+body {
+  text-align: center;
 }
+
+.family__banner {
+   display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 70%;
+    margin: 1rem auto;
+    position: relative;
+    gap: 1rem;
+}
+
+.family__banner__front {
+  position: relative;
+  display: flex;
+  justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+    z-index: 2;
+  margin: auto;
+  width: 70%;
+  border: 2px solid rgb(184, 134, 68);
+  border-radius: 12px 12px;
+  padding: 4px 2px;
+  background: burlywood;
+  height: 6rem;
+}
+
+/* BANNER RIGHT TAIL */
+
+.banner__tailsRight{
+    width: 15%;
+    z-index: 1;
+     
+}
+
+.banner__tailsRightLow,
+.banner__tailsRightUp{
+    min-width: 48px;
+    height: 3rem;
+    background: burlywood; 
+}
+
+.banner__tailsRightLow{
+    border-bottom: 2px solid rgb(184, 134, 68);
+    border-right: 2px solid rgb(184, 134, 68);
+    clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%);
+}
+
+.banner__tailsRightUp{
+    border-top: 2px solid rgb(184, 134, 68);
+    border-right: 2px solid rgb(184, 134, 68);
+    clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
+}
+
+/* BANNER LEFT TAIL */
+
+.banner__tailLeft{
+    z-index: 1;
+    margin-right: -2rem;
+    width: 15%;
+}
+
+.banner__tailsLeftLow,
+.banner__tailsLeftUp{
+    min-width: 48px;
+    height: 3rem;
+    background: burlywood;   
+}
+
+.banner__tailsLeftLow{
+    border-bottom: 2px solid rgb(184, 134, 68);
+    border-left: 2px solid rgb(184, 134, 68);
+    border-radius: 50% 0 0;
+}
+
+.banner__tailsLeftUp{
+    border-top: 2px solid rgb(184, 134, 68);
+    border-left: 2px solid rgb(184, 134, 68);
+    border-radius: 0 0 0 50% ;
+}
+
+/* overlap so they look attached */
+/* .banner__tailsLeftLow, .banner__tailsLeftUp{ margin-right: -2rem; } */
+.banner__tailsRight{ margin-left: -2rem; }
