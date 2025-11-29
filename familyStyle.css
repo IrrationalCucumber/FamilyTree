@@ -73,13 +73,13 @@ body {
 .banner__tailsLeftLow{
     border-bottom: 2px solid rgb(184, 134, 68);
     border-left: 2px solid rgb(184, 134, 68);
-    border-radius: 50% 0 0;
+    clip-path: polygon(35% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 .banner__tailsLeftUp{
     border-top: 2px solid rgb(184, 134, 68);
     border-left: 2px solid rgb(184, 134, 68);
-    border-radius: 0 0 0 50% ;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 35% 100%);
 }
 
 /* overlap so they look attached */
