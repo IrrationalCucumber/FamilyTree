@@ -326,4 +326,7 @@ function showExtension(fam, triggerElem) {
     // insert the surname element right after the clicked element
     triggerElem.insertAdjacentElement("afterend", sur);
   }
+
+  // handle property name variants and render
+  sur.textContent = fam.surname;
 }
