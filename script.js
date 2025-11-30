@@ -211,12 +211,15 @@ function myFunction(passedName) {
         tree.Potot.child[5].Surname + " Family";
       document.getElementById("f").innerHTML = tree.Potot.child[5].Father;
       document.getElementById("m").innerHTML = tree.Potot.child[5].Mother;
-      document.getElementById("ch1").innerHTML =
-        tree.Potot.child[5].child[0];
-      document.getElementById("ch2").innerHTML =
-        tree.Potot.child[5].child[1];
-      document.getElementById("ch3").innerHTML =
-        tree.Potot.child[5].child[2];
+      let cArray = tree.Potot.child[5].child // assign array
+      let cLength = tree.Potot.child[5].child.length // store length
+      //loop to get array postition and name
+      //then pass to function
+      for(let i=0; i <cLength; i++){
+        var num = i
+        var n = cArray[i]
+        addChild(num, n)
+      }
       break;
   }
 
