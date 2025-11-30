@@ -306,7 +306,7 @@ function addchildren(num, children, ext, arr) {
   const elemnt = document.createElement("h2"); // add elemnt
   if (e == true) {
     elemnt.style.border = "2px solid red";
-    elemnt.addEventListener("click", () => showExtension(arr));
+    elemnt.addEventListener("click", () => showExtension(arr, elemnt));
   }
   elemnt.id = "ch" + number; // assign id
 
@@ -315,6 +315,15 @@ function addchildren(num, children, ext, arr) {
   document.body.appendChild(elemnt);
 }
 
-function showExtension(fam){
-   console.log("showExtension data:", fam);
+function showExtension(fam, triggerElem) {
+  if (!fam) return;
+  const containerId = "sur";
+  let sur = document.getElementById(containerId);
+
+  if (!sur) {
+    sur = document.createElement("h3");
+    sur.id = containerId;
+    // insert the surname element right after the clicked element
+    triggerElem.insertAdjacentElement("afterend", sur);
+  }
 }
