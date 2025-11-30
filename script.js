@@ -81,7 +81,8 @@ const tree = {
             child: "Allyssa Mae",
             partner: "Jushua",
             childred: ["Zhyleen Haichee"],
-          },"Adrean Paul"
+          },
+          "Adrean Paul",
         ],
       },
       {
@@ -115,8 +116,8 @@ function myFunction(passedName) {
   name = name.toLowerCase();
 
   //array to store children
-  var cArray = []
-  var cLength
+  var cArray = [];
+  var cLength;
 
   //alert(name);
   switch (name) {
@@ -125,54 +126,72 @@ function myFunction(passedName) {
         tree.Potot.child[0].Surname + " Family";
       document.getElementById("f").innerHTML = tree.Potot.child[0].Father;
       document.getElementById("m").innerHTML = tree.Potot.child[0].Mother;
-      document.getElementById("ch1").innerHTML =
-        tree.Potot.child[0].child[0];
-      document.getElementById("ch2").innerHTML =
-        tree.Potot.child[0].child[1];
-      document.getElementById("ch3").innerHTML =
-        tree.Potot.child[0].child[2];
-      document.getElementById("ch4").innerHTML =
-        tree.Potot.child[0].child[3];
-      document.getElementById("ch5").innerHTML =
-        tree.Potot.child[0].child[4];
-      document.getElementById("ch6").innerHTML =
-        tree.Potot.child[0].child[5];
-      document.getElementById("ch7").innerHTML =
-        tree.Potot.child[0].child[6];
-      document.getElementById("ch8").innerHTML =
-        tree.Potot.child[0].child[7];
-      document.getElementById("ch9").innerHTML =
-        tree.Potot.child[0].child[8];
+      //add childeren loop
+      cArray = tree.Potot.child[0].child; // assign array
+      cLength = tree.Potot.child[0].child.length; // store length
+      //loop to get array postition and name
+      for (let i = 0; i < cLength; i++) {
+        //check if child hva a family
+        if (cArray[i].Extended) {
+          console.log(cArray);
+          var num = i;
+          var n = cArray[i].child;
+          var ext = cArray[i].Extended;
+          addChild(num, n, ext);
+        } else {
+          var num = i;
+          var n = cArray[i];
+          addChild(num, n);
+        }
+      }
       break;
     case "lilibeth":
       document.getElementById("fam").innerHTML =
         tree.Potot.child[1].Surname + " Family";
       document.getElementById("f").innerHTML = tree.Potot.child[1].Father;
       document.getElementById("m").innerHTML = tree.Potot.child[1].Mother;
-      document.getElementById("ch1").innerHTML =
-        tree.Potot.child[1].child[0];
-      document.getElementById("ch2").innerHTML =
-        tree.Potot.child[1].child[1];
-      document.getElementById("ch3").innerHTML =
-        tree.Potot.child[1].child[2];
-      document.getElementById("ch4").innerHTML =
-        tree.Potot.child[1].child[3];
-      document.getElementById("ch5").innerHTML =
-        tree.Potot.child[1].child[4];
+      //add childeren
+      cArray = tree.Potot.child[1].child; // assign array
+      cLength = tree.Potot.child[1].child.length; // store length
+      //loop to get array postition and name
+      for (let i = 0; i < cLength; i++) {
+        //check if child hva a family
+        if (cArray[i].Extended) {
+          console.log(cArray);
+          var num = i;
+          var n = cArray[i].child;
+          var ext = cArray[i].Extended;
+          addChild(num, n, ext);
+        } else {
+          var num = i;
+          var n = cArray[i];
+          addChild(num, n);
+        }
+      }
       break;
     case "flor":
       document.getElementById("fam").innerHTML =
         tree.Potot.child[2].Surname + " Family";
       document.getElementById("f").innerHTML = tree.Potot.child[2].Father;
       document.getElementById("m").innerHTML = tree.Potot.child[2].Mother;
-      document.getElementById("ch1").innerHTML =
-        tree.Potot.child[2].child[0];
-      document.getElementById("ch2").innerHTML =
-        tree.Potot.child[2].child[1];
-      document.getElementById("ch3").innerHTML =
-        tree.Potot.child[2].child[2];
-      document.getElementById("ch4").innerHTML =
-        tree.Potot.child[2].child[3];
+      //add childeren
+      cArray = tree.Potot.child[2].child; // assign array
+      cLength = tree.Potot.child[2].child.length; // store length
+      //loop to get array postition and name
+      for (let i = 0; i < cLength; i++) {
+        //check if child hva a family
+        if (cArray[i].Extended) {
+          console.log(cArray);
+          var num = i;
+          var n = cArray[i].child;
+          var ext = cArray[i].Extended;
+          addChild(num, n, ext);
+        } else {
+          var num = i;
+          var n = cArray[i];
+          addChild(num, n);
+        }
+      }
       break;
     case "grace":
       document.getElementById("fam").innerHTML =
@@ -182,24 +201,23 @@ function myFunction(passedName) {
       //add childeren
       //create funtion to add instead of static display
       //less bloat to script and html files
-      cArray = tree.Potot.child[3].child // assign array
-      cLength = tree.Potot.child[3].child.length // store length
+      cArray = tree.Potot.child[3].child; // assign array
+      cLength = tree.Potot.child[3].child.length; // store length
       //loop to get array postition and name
       //then pass to function
-      for(let i=0; i <cLength; i++){
+      for (let i = 0; i < cLength; i++) {
         //check if child hva a family
-        if(cArray[i].Extended){
-          console.log(cArray)
-           //document.getElementById("test").innerHTML = "success"
-           var num = i
-           var n = cArray[i].child
-           var ext = cArray[i].Extended
-           addChild(num, n, ext)
-        }
-        else{
-          var num = i
-          var n = cArray[i]
-          addChild(num, n)
+        if (cArray[i].Extended) {
+          console.log(cArray);
+          //document.getElementById("test").innerHTML = "success"
+          var num = i;
+          var n = cArray[i].child;
+          var ext = cArray[i].Extended;
+          addChild(num, n, ext);
+        } else {
+          var num = i;
+          var n = cArray[i];
+          addChild(num, n);
         }
       }
       break;
@@ -211,12 +229,24 @@ function myFunction(passedName) {
         tree.Potot.child[4].Surname + " Family";
       document.getElementById("f").innerHTML = tree.Potot.child[4].Father;
       document.getElementById("m").innerHTML = tree.Potot.child[4].Mother;
-      document.getElementById("ch1").innerHTML =
-        tree.Potot.child[4].child[0];
-      document.getElementById("ch2").innerHTML =
-        tree.Potot.child[4].child[1];
-      document.getElementById("ch3").innerHTML =
-        tree.Potot.child[4].child[2];
+      //add childeren
+      cArray = tree.Potot.child[4].child; // assign array
+      cLength = tree.Potot.child[4].child.length; // store length
+      //loop to get array postition and name
+      for (let i = 0; i < cLength; i++) {
+        //check if child hva a family
+        if (cArray[i].Extended) {
+          console.log(cArray);
+          var num = i;
+          var n = cArray[i].child;
+          var ext = cArray[i].Extended;
+          addChild(num, n, ext);
+        } else {
+          var num = i;
+          var n = cArray[i];
+          addChild(num, n);
+        }
+      }
       break;
     case "joy":
       document.getElementById("fam").innerHTML =
@@ -224,14 +254,14 @@ function myFunction(passedName) {
       document.getElementById("f").innerHTML = tree.Potot.child[5].Father;
       document.getElementById("m").innerHTML = tree.Potot.child[5].Mother;
       //add chidlren
-      cArray = tree.Potot.child[5].child // assign array
-      cLength = tree.Potot.child[5].child.length // store length
+      cArray = tree.Potot.child[5].child; // assign array
+      cLength = tree.Potot.child[5].child.length; // store length
       //loop to get array postition and name
       //then pass to function
-      for(let i=0; i <cLength; i++){
-        var num = i
-        var n = cArray[i]
-        addChild(num, n)
+      for (let i = 0; i < cLength; i++) {
+        var num = i;
+        var n = cArray[i];
+        addChild(num, n);
       }
       break;
   }
@@ -251,16 +281,16 @@ function goToFamily(fam) {
 
 //funtion to add child if more than one
 function addChild(num, child, ext) {
-  const number = num //num passed
-  const name = child //name passed
-  const e = ext
-  const elemnt = document.createElement('h2'); // add elemnt
-  if(e == true){
-    elemnt.style.border = '2px solid red';
+  const number = num; //num passed
+  const name = child; //name passed
+  const e = ext;
+  const elemnt = document.createElement("h2"); // add elemnt
+  if (e == true) {
+    elemnt.style.border = "2px solid red";
   }
-    elemnt.id = "ch" + number // assign id
-  
-  elemnt.textContent = name
+  elemnt.id = "ch" + number; // assign id
+
+  elemnt.textContent = name;
 
   document.body.appendChild(elemnt);
 }
