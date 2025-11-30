@@ -6,12 +6,12 @@ const tree = {
   Potot: {
     Father: "Benjamin",
     Mother: "Leoncita",
-    child: [
+    children: [
       {
         Surname: "Potot",
         Father: "Benjamin Jr",
         Mother: "Maria F",
-        child: [
+        children: [
           "Marvin",
           "Rowen",
           "Lauren",
@@ -27,60 +27,76 @@ const tree = {
         Surname: "Ochea",
         Father: "William",
         Mother: "Lilibeth",
-        child: ["Janessa", "Jennelyn", "William Jr", "Jeycel", "Julia"],
-        Extension: [
+        children: [
           {
-            Surname: "Barrientos",
-            Father: "Clifford",
-            Mother: "Janessa",
-            child: "Aleeya, Liam, Aya",
+            Extended: true,
+            child: "Janessa",
+            partner: "Clifford",
+            surname: "Barrientos",
+            childred: ["ch1", "ch2", "ch3"],
           },
           {
-            Surname: "Mata",
-            Father: "Jojo",
-            Mother: "Jennelyn",
-            child: "Nicole, 2nd Daughter",
+            Extended: true,
+            child: "Jerwelyn",
+            partner: "Jojo",
+            surname: "Mata",
+            children: ["ch1", "ch2", "ch3"],
           },
-          {
-            Surname: "Ochea",
-            Father: "William Jr",
-            Mother: "Cathy",
-            child: "1st Daughter,",
+           {
+            Extended: true,
+            child: "William Jr",
+            partner: "Cathy",
+            surname: "Ochea",
+            children: ["ch1", "ch2", "ch3"],
           },
-          {
-            Surname: "",
-            Father: "Charles",
-            Mother: "Jeycel",
-            child: "1st Son, Noah",
+           {
+            Extended: true,
+            child: "Jeycel",
+            partner: "Charles",
+            surname: "",
+            children: ["ch1", "ch2", "ch3"],
           },
+          "Julia",
         ],
       },
       {
         Surname: "Ontong",
         Father: "Mario",
         Mother: "Maria Fe",
-        child: ["StepheMar", "ShelowMay", "ShenaPril", "SaeverJun"],
-        Extension: {
-          Ontong: {
-            Father: "Stephemar",
-            Mother: "Jane",
-            child: "Madi, 2nd Daughter, Son",
+        children: [
+          {
+            Extended: true,
+            child: "StepheMar",
+            partner: "Jane",
+            surname: "Ontong",
+            children: ["Ch1", "ch2", "ch3"],
           },
-          Shenapril: {
-            Childred: "Travis, Sasa, 2nd Son",
+          {
+            Extended: true,
+            child: "ShelowMay",
+            partner: "Angelou",
+            surname: "",
           },
-        },
+          {
+            Extended: true,
+            child: "ShenaPril",
+            surname: "Ontong",
+            children: ["ch1", "ch2", "ch3"],
+          },
+          "SaeverJun",
+        ],
       },
       {
         Surname: "Sorono",
         Father: "Wilfredo",
         Mother: "Grace",
-        child: [
+        children: [
           {
             Extended: true,
             child: "Allyssa Mae",
             partner: "Jushua",
-            childred: ["Zhyleen Haichee"],
+            surname: "Aredidon",
+            children: ["Zhyleen Haichee"],
           },
           "Adrean Paul",
         ],
@@ -89,20 +105,22 @@ const tree = {
         Surname: "Novicio",
         Father: "Dionecio",
         Mother: "Luciela",
-        child: ["Vincent Christian", "Vanessa Faith", "Verdex Jekyle"],
-        Extension: {
-          Novicio: {
-            Father: "Vincent Christian",
-            Mother: "Weena",
-            child: "Severus, Stephen jon, Samantha",
+        children: [
+          {
+            Extended: true,
+            child: "Vincent Christian",
+            partner: "Wena",
+            children: ["ch1", "ch2", "ch3"],
           },
-        },
+          "Vanessa Faith",
+          "Verdex Jekyle",
+        ],
       },
       {
         Surname: "Opaon",
         Father: "Eric",
         Mother: "Joy",
-        child: ["Erica Joyce", "Mia Mae", "Ella"],
+        children: ["Erica Joyce", "Mia Mae", "Ella"],
       },
       "Ophelia Potot",
     ],
@@ -115,7 +133,7 @@ function myFunction(passedName) {
   let name = params.get("fam"); // store value
   name = name.toLowerCase();
 
-  //array to store children
+  //array to store childrenren
   var cArray = [];
   var cLength;
 
@@ -123,145 +141,145 @@ function myFunction(passedName) {
   switch (name) {
     case "jr":
       document.getElementById("fam").innerHTML =
-        tree.Potot.child[0].Surname + " Family";
-      document.getElementById("f").innerHTML = tree.Potot.child[0].Father;
-      document.getElementById("m").innerHTML = tree.Potot.child[0].Mother;
-      //add childeren loop
-      cArray = tree.Potot.child[0].child; // assign array
-      cLength = tree.Potot.child[0].child.length; // store length
+        tree.Potot.children[0].Surname + " Family";
+      document.getElementById("f").innerHTML = tree.Potot.children[0].Father;
+      document.getElementById("m").innerHTML = tree.Potot.children[0].Mother;
+      //add childreneren loop
+      cArray = tree.Potot.children[0].children; // assign array
+      cLength = tree.Potot.children[0].children.length; // store length
       //loop to get array postition and name
       for (let i = 0; i < cLength; i++) {
-        //check if child hva a family
+        //check if children hva a family
         if (cArray[i].Extended) {
           console.log(cArray);
           var num = i;
-          var n = cArray[i].child;
+          var n = cArray[i].children;
           var ext = cArray[i].Extended;
-          addChild(num, n, ext);
+          addchildren(num, n, ext);
         } else {
           var num = i;
           var n = cArray[i];
-          addChild(num, n);
+          addchildren(num, n);
         }
       }
       break;
     case "lilibeth":
       document.getElementById("fam").innerHTML =
-        tree.Potot.child[1].Surname + " Family";
-      document.getElementById("f").innerHTML = tree.Potot.child[1].Father;
-      document.getElementById("m").innerHTML = tree.Potot.child[1].Mother;
-      //add childeren
-      cArray = tree.Potot.child[1].child; // assign array
-      cLength = tree.Potot.child[1].child.length; // store length
+        tree.Potot.children[1].Surname + " Family";
+      document.getElementById("f").innerHTML = tree.Potot.children[1].Father;
+      document.getElementById("m").innerHTML = tree.Potot.children[1].Mother;
+      //add childreneren
+      cArray = tree.Potot.children[1].children; // assign array
+      cLength = tree.Potot.children[1].children.length; // store length
       //loop to get array postition and name
       for (let i = 0; i < cLength; i++) {
-        //check if child hva a family
+        //check if children hva a family
         if (cArray[i].Extended) {
           console.log(cArray);
           var num = i;
-          var n = cArray[i].child;
+          var n = cArray[i].children;
           var ext = cArray[i].Extended;
-          addChild(num, n, ext);
+          addchildren(num, n, ext);
         } else {
           var num = i;
           var n = cArray[i];
-          addChild(num, n);
+          addchildren(num, n);
         }
       }
       break;
     case "flor":
       document.getElementById("fam").innerHTML =
-        tree.Potot.child[2].Surname + " Family";
-      document.getElementById("f").innerHTML = tree.Potot.child[2].Father;
-      document.getElementById("m").innerHTML = tree.Potot.child[2].Mother;
-      //add childeren
-      cArray = tree.Potot.child[2].child; // assign array
-      cLength = tree.Potot.child[2].child.length; // store length
+        tree.Potot.children[2].Surname + " Family";
+      document.getElementById("f").innerHTML = tree.Potot.children[2].Father;
+      document.getElementById("m").innerHTML = tree.Potot.children[2].Mother;
+      //add childreneren
+      cArray = tree.Potot.children[2].children; // assign array
+      cLength = tree.Potot.children[2].children.length; // store length
       //loop to get array postition and name
       for (let i = 0; i < cLength; i++) {
-        //check if child hva a family
+        //check if children hva a family
         if (cArray[i].Extended) {
           console.log(cArray);
           var num = i;
-          var n = cArray[i].child;
+          var n = cArray[i].children;
           var ext = cArray[i].Extended;
-          addChild(num, n, ext);
+          addchildren(num, n, ext);
         } else {
           var num = i;
           var n = cArray[i];
-          addChild(num, n);
+          addchildren(num, n);
         }
       }
       break;
     case "grace":
       document.getElementById("fam").innerHTML =
-        tree.Potot.child[3].Surname + " Family";
-      document.getElementById("f").innerHTML = tree.Potot.child[3].Father;
-      document.getElementById("m").innerHTML = tree.Potot.child[3].Mother;
-      //add childeren
+        tree.Potot.children[3].Surname + " Family";
+      document.getElementById("f").innerHTML = tree.Potot.children[3].Father;
+      document.getElementById("m").innerHTML = tree.Potot.children[3].Mother;
+      //add childreneren
       //create funtion to add instead of static display
       //less bloat to script and html files
-      cArray = tree.Potot.child[3].child; // assign array
-      cLength = tree.Potot.child[3].child.length; // store length
+      cArray = tree.Potot.children[3].children; // assign array
+      cLength = tree.Potot.children[3].children.length; // store length
       //loop to get array postition and name
       //then pass to function
       for (let i = 0; i < cLength; i++) {
-        //check if child hva a family
+        //check if children hva a family
         if (cArray[i].Extended) {
           console.log(cArray);
           //document.getElementById("test").innerHTML = "success"
           var num = i;
-          var n = cArray[i].child;
+          var n = cArray[i].children;
           var ext = cArray[i].Extended;
-          addChild(num, n, ext);
+          addchildren(num, n, ext);
         } else {
           var num = i;
           var n = cArray[i];
-          addChild(num, n);
+          addchildren(num, n);
         }
       }
       break;
     case "ophelia":
-      document.getElementById("fam").innerHTML = tree.Potot.child[6];
+      document.getElementById("fam").innerHTML = tree.Potot.children[6];
       break;
     case "luciela":
       document.getElementById("fam").innerHTML =
-        tree.Potot.child[4].Surname + " Family";
-      document.getElementById("f").innerHTML = tree.Potot.child[4].Father;
-      document.getElementById("m").innerHTML = tree.Potot.child[4].Mother;
-      //add childeren
-      cArray = tree.Potot.child[4].child; // assign array
-      cLength = tree.Potot.child[4].child.length; // store length
+        tree.Potot.children[4].Surname + " Family";
+      document.getElementById("f").innerHTML = tree.Potot.children[4].Father;
+      document.getElementById("m").innerHTML = tree.Potot.children[4].Mother;
+      //add childreneren
+      cArray = tree.Potot.children[4].children; // assign array
+      cLength = tree.Potot.children[4].children.length; // store length
       //loop to get array postition and name
       for (let i = 0; i < cLength; i++) {
-        //check if child hva a family
+        //check if children hva a family
         if (cArray[i].Extended) {
           console.log(cArray);
           var num = i;
-          var n = cArray[i].child;
+          var n = cArray[i].children;
           var ext = cArray[i].Extended;
-          addChild(num, n, ext);
+          addchildren(num, n, ext);
         } else {
           var num = i;
           var n = cArray[i];
-          addChild(num, n);
+          addchildren(num, n);
         }
       }
       break;
     case "joy":
       document.getElementById("fam").innerHTML =
-        tree.Potot.child[5].Surname + " Family";
-      document.getElementById("f").innerHTML = tree.Potot.child[5].Father;
-      document.getElementById("m").innerHTML = tree.Potot.child[5].Mother;
+        tree.Potot.children[5].Surname + " Family";
+      document.getElementById("f").innerHTML = tree.Potot.children[5].Father;
+      document.getElementById("m").innerHTML = tree.Potot.children[5].Mother;
       //add chidlren
-      cArray = tree.Potot.child[5].child; // assign array
-      cLength = tree.Potot.child[5].child.length; // store length
+      cArray = tree.Potot.children[5].children; // assign array
+      cLength = tree.Potot.children[5].children.length; // store length
       //loop to get array postition and name
       //then pass to function
       for (let i = 0; i < cLength; i++) {
         var num = i;
         var n = cArray[i];
-        addChild(num, n);
+        addchildren(num, n);
       }
       break;
   }
@@ -279,10 +297,10 @@ function goToFamily(fam) {
   // apply myFunction
 }
 
-//funtion to add child if more than one
-function addChild(num, child, ext) {
+//funtion to add children if more than one
+function addchildren(num, children, ext) {
   const number = num; //num passed
-  const name = child; //name passed
+  const name = children; //name passed
   const e = ext;
   const elemnt = document.createElement("h2"); // add elemnt
   if (e == true) {
@@ -292,5 +310,5 @@ function addChild(num, child, ext) {
 
   elemnt.textContent = name;
 
-  document.body.appendChild(elemnt);
+  document.body.appendchildren(elemnt);
 }
