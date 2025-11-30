@@ -153,7 +153,7 @@ function myFunction(passedName) {
         if (cArray[i].Extended) {
           console.log(cArray);
           var num = i;
-          var n = cArray[i].children;
+          var n = cArray[i].child;
           var ext = cArray[i].Extended;
           addchildren(num, n, ext);
         } else {
@@ -177,7 +177,7 @@ function myFunction(passedName) {
         if (cArray[i].Extended) {
           console.log(cArray);
           var num = i;
-          var n = cArray[i].children;
+          var n = cArray[i].child;
           var ext = cArray[i].Extended;
           addchildren(num, n, ext);
         } else {
@@ -201,7 +201,7 @@ function myFunction(passedName) {
         if (cArray[i].Extended) {
           console.log(cArray);
           var num = i;
-          var n = cArray[i].children;
+          var n = cArray[i].child;
           var ext = cArray[i].Extended;
           addchildren(num, n, ext);
         } else {
@@ -229,9 +229,10 @@ function myFunction(passedName) {
           console.log(cArray);
           //document.getElementById("test").innerHTML = "success"
           var num = i;
-          var n = cArray[i].children;
+          var n = cArray[i].child;
           var ext = cArray[i].Extended;
-          addchildren(num, n, ext);
+          var arr = tree.Potot.children[3].children[i]
+          addchildren(num, n, ext, arr);
         } else {
           var num = i;
           var n = cArray[i];
@@ -256,7 +257,7 @@ function myFunction(passedName) {
         if (cArray[i].Extended) {
           console.log(cArray);
           var num = i;
-          var n = cArray[i].children;
+          var n = cArray[i].child;
           var ext = cArray[i].Extended;
           addchildren(num, n, ext);
         } else {
@@ -298,17 +299,22 @@ function goToFamily(fam) {
 }
 
 //funtion to add children if more than one
-function addchildren(num, children, ext) {
+function addchildren(num, children, ext, arr) {
   const number = num; //num passed
   const name = children; //name passed
   const e = ext;
   const elemnt = document.createElement("h2"); // add elemnt
   if (e == true) {
     elemnt.style.border = "2px solid red";
+    elemnt.addEventListener("click", () => showExtension(arr));
   }
   elemnt.id = "ch" + number; // assign id
 
   elemnt.textContent = name;
 
-  document.body.appendchildren(elemnt);
+  document.body.appendChild(elemnt);
+}
+
+function showExtension(fam){
+   console.log("showExtension data:", fam);
 }
