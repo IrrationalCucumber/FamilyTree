@@ -336,5 +336,13 @@ function showExtension(fam, triggerElem, number) {
   part.id = "extPart" + number
   sur.insertAdjacentElement("afterend", part)
   part.textContent = fam.partner
-  
+  // add child/ren
+  extChArray = fam.children //store array
+  arrayLngth = fam.children.length // get length
+      for (let i = 0; i < arrayLngth; i++) {
+        let extChild = document.createElement("h3") //create element h3
+        extChild.id = "extCh" + number + "" + i //id extensionChild + number of parent + number of child
+        part.insertAdjacentElement("afterend", extChild) // insert after father
+        extChild.textContent = extChArray[i]
+      }
 }
