@@ -203,7 +203,8 @@ function myFunction(passedName) {
           var num = i;
           var n = cArray[i].child;
           var ext = cArray[i].Extended;
-          addchildren(num, n, ext);
+          var arr = tree.Potot.children[2].children[i]
+          addchildren(num, n, ext, arr);
         } else {
           var num = i;
           var n = cArray[i];
@@ -259,7 +260,8 @@ function myFunction(passedName) {
           var num = i;
           var n = cArray[i].child;
           var ext = cArray[i].Extended;
-          addchildren(num, n, ext);
+          var arr = tree.Potot.children[4].children[i]
+          addchildren(num, n, ext, arr);
         } else {
           var num = i;
           var n = cArray[i];
@@ -309,9 +311,7 @@ function addchildren(num, children, ext, arr) {
     elemnt.addEventListener("click", () => showExtension(arr, elemnt, number));
   }
   elemnt.id = "ch" + number; // assign id
-
   elemnt.textContent = name;
-
   document.body.appendChild(elemnt);
 }
 
