@@ -304,45 +304,73 @@ function goToFamily(fam) {
 function addchildren(num, children, ext, arr) {
   const number = num; //num passed
   const name = children; //name passed
-  const e = ext;
+  const e = !!ext; //if true: (child has extended family)
   const elemnt = document.createElement("h2"); // add elemnt
-  if (e == true) {
+   elemnt.textContent = name;
+   if (e) {
     elemnt.style.border = "2px solid red";
     elemnt.addEventListener("click", () => showExtension(arr, elemnt, number));
   }
   elemnt.id = "ch" + number; // assign id
-  elemnt.textContent = name;
+ 
   document.body.appendChild(elemnt);
 }
 
 function showExtension(fam, triggerElem, number) {
-  console.log(fam);
-  console.log(number);
-  if (!fam) return;
-  const containerId = "sur";
-  let sur = document.getElementById(containerId);
+  // console.log(fam);
+  // console.log(number);
+   if (!fam || !triggerElem) return;
+  const containerId = "sur" +number; //assing surname id
+  const existing = document.getElementById(containerId);
+  //remove if exist
+  if (existing) {
+      existing.remove();
+      return;
+    }
 
-  if (!sur) {
-    sur = document.createElement("h3");
-    sur.id = containerId;
-    // insert the surname element right after the clicked element
-    triggerElem.insertAdjacentElement("afterend", sur);
+    // create a wrapper for all extension info (surname, partner, children)
+  const wrapper = document.createElement("div");
+  wrapper.id = containerId;
+  wrapper.className = "extension";
+
+   // surname (handle different property names)
+  const surnameText = fam.surname || fam.Surname || "Surname not available";
+  const sur = document.createElement("h3");
+  sur.textContent = surnameText + " Family";
+  wrapper.appendChild(sur);
+  
+
+  // if (!sur) {
+  //   sur = document.createElement("h3");
+  //   sur.id = containerId;
+  //   // insert the surname element right after the clicked element
+  //   triggerElem.insertAdjacentElement("afterend", sur);
+  // }
+
+  // // handle property name variants and render
+  // sur.textContent = fam.surname + " Family";
+   
+  //add extended partner
+   // partner
+  if (fam.partner) {
+    const part = document.createElement("h4");
+    part.id = "extPart-" + number;
+    part.textContent = fam.partner;
+    wrapper.appendChild(part);
+  }
+  // add child/ren
+  const extChArray = fam.children || fam.childred || fam.child || [];
+  if (Array.isArray(extChArray) && extChArray.length) {
+    const ul = document.createElement("ul");
+    extChArray.forEach((c, i) => {
+      const li = document.createElement("li");
+      li.id = `extCh-${number}-${i}`;
+      li.textContent = c;
+      ul.appendChild(li);
+    });
+    wrapper.appendChild(ul);
   }
 
-  // handle property name variants and render
-  sur.textContent = fam.surname + " Family";
-  //add extended partner
-  let part = document.createElement("h3")
-  part.id = "extPart" + number
-  sur.insertAdjacentElement("afterend", part)
-  part.textContent = fam.partner
-  // add child/ren
-  extChArray = fam.children //store array
-  arrayLngth = fam.children.length // get length
-      for (let i = 0; i < arrayLngth; i++) {
-        let extChild = document.createElement("h3") //create element h3
-        extChild.id = "extCh" + number + "" + i //id extensionChild + number of parent + number of child
-        part.insertAdjacentElement("afterend", extChild) // insert after father
-        extChild.textContent = extChArray[i]
-      }
+   // insert the whole extension block right after the clicked element
+  triggerElem.insertAdjacentElement("afterend", wrapper);
 }
