@@ -306,7 +306,7 @@ function addchildren(num, children, ext, arr) {
   const elemnt = document.createElement("h2"); // add elemnt
   if (e == true) {
     elemnt.style.border = "2px solid red";
-    elemnt.addEventListener("click", () => showExtension(arr, elemnt));
+    elemnt.addEventListener("click", () => showExtension(arr, elemnt, number));
   }
   elemnt.id = "ch" + number; // assign id
 
@@ -315,7 +315,9 @@ function addchildren(num, children, ext, arr) {
   document.body.appendChild(elemnt);
 }
 
-function showExtension(fam, triggerElem) {
+function showExtension(fam, triggerElem, number) {
+  console.log(fam);
+  console.log(number);
   if (!fam) return;
   const containerId = "sur";
   let sur = document.getElementById(containerId);
@@ -328,5 +330,11 @@ function showExtension(fam, triggerElem) {
   }
 
   // handle property name variants and render
-  sur.textContent = fam.surname;
+  sur.textContent = fam.surname + " Family";
+  //add extended partner
+  let part = document.createElement("h3")
+  part.id = "extPart" + number
+  sur.insertAdjacentElement("afterend", part)
+  part.textContent = fam.partner
+  
 }
