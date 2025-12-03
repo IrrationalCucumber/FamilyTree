@@ -4,6 +4,10 @@ body {
   font-family: "lucida Handwriting";
 }
 
+li{
+    list-style-type: none;
+}
+
 nav{
     position: sticky;
     display: flex;
