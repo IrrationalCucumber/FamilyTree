@@ -310,8 +310,12 @@ function addchildren(num, children, ext, arr) {
   const elemnt = document.createElement("h2"); // add elemnt
    elemnt.textContent = name;
    if (e) {
+    elemnt.className = "child__with__extension"
     elemnt.style.border = "2px solid red";
     elemnt.addEventListener("click", () => showExtension(arr, elemnt, number));
+  }
+  else{
+    elemnt.className = "child"
   }
   elemnt.id = "ch" + number; // assign id
  
