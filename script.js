@@ -155,6 +155,7 @@ function myFunction(passedName) {
           var num = i;
           var n = cArray[i].child;
           var ext = cArray[i].Extended;
+          var arr = tree.Potot.children[0].children[i]
           addchildren(num, n, ext);
         } else {
           var num = i;
@@ -179,6 +180,7 @@ function myFunction(passedName) {
           var num = i;
           var n = cArray[i].child;
           var ext = cArray[i].Extended;
+          var arr = tree.Potot.children[1].children[i]
           addchildren(num, n, ext);
         } else {
           var num = i;
@@ -359,9 +361,12 @@ function showExtension(fam, triggerElem, number) {
     wrapper.appendChild(part);
   }
   // add child/ren
-  const extChArray = fam.children || fam.childred || fam.child || [];
+  const extChArray = fam.children || [];
+  //check if array is not null
   if (Array.isArray(extChArray) && extChArray.length) {
+    //create list
     const ul = document.createElement("ul");
+    //add child based on number of child
     extChArray.forEach((c, i) => {
       const li = document.createElement("li");
       li.id = `extCh-${number}-${i}`;
