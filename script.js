@@ -217,6 +217,11 @@ function myFunction(passedName) {
     case "grace":
       document.getElementById("fam").innerHTML =
         tree.Potot.children[3].Surname + " Family";
+      let surn = document.createElement("p")
+      surn.id = "see__fam"
+      surn.textContent = "Go to " +tree.Potot.children[3].Surname + " Family"
+      surn.addEventListener("click", () =>  goTo());
+      document.body.appendChild(surn)
       document.getElementById("f").innerHTML = tree.Potot.children[3].Father;
       document.getElementById("m").innerHTML = tree.Potot.children[3].Mother;
       //add childreneren
@@ -300,6 +305,11 @@ function goToFamily(fam) {
   // window.alert("vaiable: "+ x)
   document.location = "Family.html?fam=" + encodeURIComponent(x); //go to Family page
   // apply myFunction
+}
+
+function goTo() {
+  document.location = "SoronoFamily.html"
+ 
 }
 
 //funtion to add children if more than one
