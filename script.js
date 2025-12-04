@@ -142,8 +142,9 @@ function myFunction(passedName) {
     case "jr":
       document.getElementById("fam").innerHTML =
         tree.Potot.children[0].Surname + " Family";
-      document.getElementById("f").innerHTML = tree.Potot.children[0].Father;
-      document.getElementById("m").innerHTML = tree.Potot.children[0].Mother;
+      mat = tree.Potot.children[0].Father;
+      pat = tree.Potot.children[0].Mother;
+      addParents(pat, mat)
       //add childreneren loop
       cArray = tree.Potot.children[0].children; // assign array
       cLength = tree.Potot.children[0].children.length; // store length
@@ -192,8 +193,9 @@ function myFunction(passedName) {
     case "flor":
       document.getElementById("fam").innerHTML =
         tree.Potot.children[2].Surname + " Family";
-      document.getElementById("f").innerHTML = tree.Potot.children[2].Father;
-      document.getElementById("m").innerHTML = tree.Potot.children[2].Mother;
+      mat = tree.Potot.children[2].Father;
+      pat = tree.Potot.children[2].Mother;
+      addParents(pat, mat)
       //add childreneren
       cArray = tree.Potot.children[2].children; // assign array
       cLength = tree.Potot.children[2].children.length; // store length
@@ -217,13 +219,14 @@ function myFunction(passedName) {
     case "grace":
       document.getElementById("fam").innerHTML =
         tree.Potot.children[3].Surname + " Family";
+      mat = tree.Potot.children[3].Father;
+      pat = tree.Potot.children[3].Mother;
+      addParents(pat, mat)
       let surn = document.createElement("p")
       surn.id = "see__fam"
       surn.textContent = "Go to " +tree.Potot.children[3].Surname + " Family"
       surn.addEventListener("click", () =>  goTo());
       document.body.appendChild(surn)
-      document.getElementById("f").innerHTML = tree.Potot.children[3].Father;
-      document.getElementById("m").innerHTML = tree.Potot.children[3].Mother;
       //add childreneren
       //create funtion to add instead of static display
       //less bloat to script and html files
@@ -254,8 +257,9 @@ function myFunction(passedName) {
     case "luciela":
       document.getElementById("fam").innerHTML =
         tree.Potot.children[4].Surname + " Family";
-      document.getElementById("f").innerHTML = tree.Potot.children[4].Father;
-      document.getElementById("m").innerHTML = tree.Potot.children[4].Mother;
+      mat = tree.Potot.children[4].Father;
+      pat = tree.Potot.children[4].Mother;
+      addParents(pat, mat)
       //add childreneren
       cArray = tree.Potot.children[4].children; // assign array
       cLength = tree.Potot.children[4].children.length; // store length
@@ -279,8 +283,9 @@ function myFunction(passedName) {
     case "joy":
       document.getElementById("fam").innerHTML =
         tree.Potot.children[5].Surname + " Family";
-      document.getElementById("f").innerHTML = tree.Potot.children[5].Father;
-      document.getElementById("m").innerHTML = tree.Potot.children[5].Mother;
+      mat = tree.Potot.children[5].Father;
+      pat = tree.Potot.children[5].Mother;
+      addParents(pat, mat)
       //add chidlren
       cArray = tree.Potot.children[5].children; // assign array
       cLength = tree.Potot.children[5].children.length; // store length
@@ -392,4 +397,17 @@ function showExtension(fam, triggerElem, number) {
 
    // insert the whole extension block right after the clicked element
   triggerElem.insertAdjacentElement("afterend", wrapper);
+}
+
+
+//add parents
+function addParents(mat, pat){
+  const mother = document.createElement("h2")
+  mother.id = "m"
+  mother.textContent = mat
+  const father = document.createElement("h2")
+  father.id = "f"
+  father.textContent = pat
+  document.body.appendChild(father)
+  document.body.appendChild(mother)
 }
