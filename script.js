@@ -217,11 +217,14 @@ function myFunction(passedName) {
       }
       break;
     case "grace":
+      const wholeWrapp = document.createElement("div")
+      wholeWrapp.className = "subFamily__wrapper"
+      document.body.append(wholeWrapp)
       document.getElementById("fam").innerHTML =
         tree.Potot.children[3].Surname + " Family";
       mat = tree.Potot.children[3].Father;
       pat = tree.Potot.children[3].Mother;
-      addParents(pat, mat)
+      addParents(pat, mat, wholeWrapp)
       let surn = document.createElement("p")
       surn.id = "see__fam"
       surn.textContent = "Go to " +tree.Potot.children[3].Surname + " Family"
@@ -401,7 +404,7 @@ function showExtension(fam, triggerElem, number) {
 
 
 //add parents
-function addParents(mat, pat){
+function addParents(mat, pat, wholeWrapp){
   const wrapper = document.createElement("div")
   wrapper.className = "parent__wrapper"
   const mother = document.createElement("h2")
@@ -412,7 +415,7 @@ function addParents(mat, pat){
   father.className = "parent"
   father.id = "f"
   father.textContent = pat
-  document.body.appendChild(wrapper)
+  wholeWrapp.appendChild(wrapper)
   wrapper.appendChild(father)
  wrapper.appendChild(mother)
 }
