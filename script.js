@@ -168,8 +168,9 @@ function myFunction(passedName) {
     case "lilibeth":
       document.getElementById("fam").innerHTML =
         tree.Potot.children[1].Surname + " Family";
-      document.getElementById("f").innerHTML = tree.Potot.children[1].Father;
-      document.getElementById("m").innerHTML = tree.Potot.children[1].Mother;
+      mat = tree.Potot.children[1].Father;
+      pat = tree.Potot.children[1].Mother;
+      addParents(pat, mat)
       //add childreneren
       cArray = tree.Potot.children[1].children; // assign array
       cLength = tree.Potot.children[1].children.length; // store length
