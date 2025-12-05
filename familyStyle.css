@@ -107,3 +107,12 @@ nav:hover{
 /* overlap so they look attached */
 /* .banner__tailsLeftLow, .banner__tailsLeftUp{ margin-right: -2rem; } */
 .banner__tailsRight{ margin-left: -2rem; }
+
+
+.child{
+    border: 2px solid green;
+}
+
+.parent{
+    border: 2px solid black;
+}
