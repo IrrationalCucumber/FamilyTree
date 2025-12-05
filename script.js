@@ -402,12 +402,17 @@ function showExtension(fam, triggerElem, number) {
 
 //add parents
 function addParents(mat, pat){
+  const wrapper = document.createElement("div")
+  wrapper.className = "parent__wrapper"
   const mother = document.createElement("h2")
   mother.id = "m"
+  mother.className = "parent"
   mother.textContent = mat
   const father = document.createElement("h2")
+  father.className = "parent"
   father.id = "f"
   father.textContent = pat
-  document.body.appendChild(father)
-  document.body.appendChild(mother)
+  document.body.appendChild(wrapper)
+  wrapper.appendChild(father)
+ wrapper.appendChild(mother)
 }
