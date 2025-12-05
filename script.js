@@ -42,14 +42,14 @@ const tree = {
             surname: "Mata",
             children: ["ch1", "ch2", "ch3"],
           },
-           {
+          {
             Extended: true,
             child: "William Jr",
             partner: "Cathy",
             surname: "Ochea",
             children: ["ch1", "ch2", "ch3"],
           },
-           {
+          {
             Extended: true,
             child: "Jeycel",
             partner: "Charles",
@@ -144,7 +144,7 @@ function myFunction(passedName) {
         tree.Potot.children[0].Surname + " Family";
       mat = tree.Potot.children[0].Father;
       pat = tree.Potot.children[0].Mother;
-      addParents(pat, mat)
+      addParents(pat, mat);
       //add childreneren loop
       cArray = tree.Potot.children[0].children; // assign array
       cLength = tree.Potot.children[0].children.length; // store length
@@ -156,7 +156,7 @@ function myFunction(passedName) {
           var num = i;
           var n = cArray[i].child;
           var ext = cArray[i].Extended;
-          var arr = tree.Potot.children[0].children[i]
+          var arr = tree.Potot.children[0].children[i];
           addchildren(num, n, ext);
         } else {
           var num = i;
@@ -170,7 +170,7 @@ function myFunction(passedName) {
         tree.Potot.children[1].Surname + " Family";
       mat = tree.Potot.children[1].Father;
       pat = tree.Potot.children[1].Mother;
-      addParents(pat, mat)
+      addParents(pat, mat);
       //add childreneren
       cArray = tree.Potot.children[1].children; // assign array
       cLength = tree.Potot.children[1].children.length; // store length
@@ -182,7 +182,7 @@ function myFunction(passedName) {
           var num = i;
           var n = cArray[i].child;
           var ext = cArray[i].Extended;
-          var arr = tree.Potot.children[1].children[i]
+          var arr = tree.Potot.children[1].children[i];
           addchildren(num, n, ext);
         } else {
           var num = i;
@@ -196,7 +196,7 @@ function myFunction(passedName) {
         tree.Potot.children[2].Surname + " Family";
       mat = tree.Potot.children[2].Father;
       pat = tree.Potot.children[2].Mother;
-      addParents(pat, mat)
+      addParents(pat, mat);
       //add childreneren
       cArray = tree.Potot.children[2].children; // assign array
       cLength = tree.Potot.children[2].children.length; // store length
@@ -208,7 +208,7 @@ function myFunction(passedName) {
           var num = i;
           var n = cArray[i].child;
           var ext = cArray[i].Extended;
-          var arr = tree.Potot.children[2].children[i]
+          var arr = tree.Potot.children[2].children[i];
           addchildren(num, n, ext, arr);
         } else {
           var num = i;
@@ -218,19 +218,19 @@ function myFunction(passedName) {
       }
       break;
     case "grace":
-      const wholeWrapp = document.createElement("div")
-      wholeWrapp.className = "subFamily__wrapper"
-      document.body.append(wholeWrapp)
+      const wholeWrapp = document.createElement("div");
+      wholeWrapp.className = "subFamily__wrapper";
+      document.body.append(wholeWrapp);
       document.getElementById("fam").innerHTML =
         tree.Potot.children[3].Surname + " Family";
       mat = tree.Potot.children[3].Father;
       pat = tree.Potot.children[3].Mother;
-      addParents(pat, mat, wholeWrapp)
-      let surn = document.createElement("p")
-      surn.id = "see__fam"
-      surn.textContent = "Go to " +tree.Potot.children[3].Surname + " Family"
-      surn.addEventListener("click", () =>  goTo());
-      document.body.appendChild(surn)
+      addParents(pat, mat, wholeWrapp);
+      let surn = document.createElement("p");
+      surn.id = "see__fam";
+      surn.textContent = "Go to " + tree.Potot.children[3].Surname + " Family";
+      surn.addEventListener("click", () => goTo());
+      document.body.appendChild(surn);
       //add childreneren
       //create funtion to add instead of static display
       //less bloat to script and html files
@@ -246,7 +246,7 @@ function myFunction(passedName) {
           var num = i;
           var n = cArray[i].child;
           var ext = cArray[i].Extended;
-          var arr = tree.Potot.children[3].children[i]
+          var arr = tree.Potot.children[3].children[i];
           addchildren(num, n, ext, arr);
         } else {
           var num = i;
@@ -263,7 +263,7 @@ function myFunction(passedName) {
         tree.Potot.children[4].Surname + " Family";
       mat = tree.Potot.children[4].Father;
       pat = tree.Potot.children[4].Mother;
-      addParents(pat, mat)
+      addParents(pat, mat);
       //add childreneren
       cArray = tree.Potot.children[4].children; // assign array
       cLength = tree.Potot.children[4].children.length; // store length
@@ -275,7 +275,7 @@ function myFunction(passedName) {
           var num = i;
           var n = cArray[i].child;
           var ext = cArray[i].Extended;
-          var arr = tree.Potot.children[4].children[i]
+          var arr = tree.Potot.children[4].children[i];
           addchildren(num, n, ext, arr);
         } else {
           var num = i;
@@ -289,7 +289,7 @@ function myFunction(passedName) {
         tree.Potot.children[5].Surname + " Family";
       mat = tree.Potot.children[5].Father;
       pat = tree.Potot.children[5].Mother;
-      addParents(pat, mat)
+      addParents(pat, mat);
       //add chidlren
       cArray = tree.Potot.children[5].children; // assign array
       cLength = tree.Potot.children[5].children.length; // store length
@@ -317,8 +317,7 @@ function goToFamily(fam) {
 }
 
 function goTo() {
-  document.location = "SoronoFamily.html"
- 
+  document.location = "SoronoFamily.html";
 }
 
 //funtion to add children if more than one
@@ -327,43 +326,41 @@ function addchildren(num, children, ext, arr) {
   const name = children; //name passed
   const e = !!ext; //if true: (child has extended family)
   const elemnt = document.createElement("h2"); // add elemnt
-   elemnt.textContent = name;
-   if (e) {
-    elemnt.className = "child__with__extension"
+  elemnt.textContent = name;
+  if (e) {
+    elemnt.className = "child__with__extension";
     elemnt.style.border = "2px solid red";
     elemnt.addEventListener("click", () => showExtension(arr, elemnt, number));
-  }
-  else{
-    elemnt.className = "child"
+  } else {
+    elemnt.className = "child";
   }
   elemnt.id = "ch" + number; // assign id
- 
+
   document.body.appendChild(elemnt);
 }
 
 function showExtension(fam, triggerElem, number) {
   // console.log(fam);
   // console.log(number);
-   if (!fam || !triggerElem) return;
-  const containerId = "sur" +number; //assing surname id
+  if (!fam || !triggerElem) return;
+  const containerId = "sur" + number; //assing surname id
   const existing = document.getElementById(containerId);
   //remove if exist
   if (existing) {
-      existing.remove();
-      return;
-    }
+    existing.remove();
+    return;
+  }
 
-    // create a wrapper for all extension info (surname, partner, children)
+  // create a wrapper for all extension info (surname, partner, children)
   const wrapper = document.createElement("div");
   wrapper.id = containerId;
   wrapper.className = "extension";
 
-   // surname (handle different property names)
+  // surname (handle different property names)
   const surnameText = fam.surname || fam.Surname || "Surname not available";
   const sur = document.createElement("h3");
   sur.textContent = surnameText + " Family";
   wrapper.appendChild(sur);
-  
 
   // if (!sur) {
   //   sur = document.createElement("h3");
@@ -374,9 +371,9 @@ function showExtension(fam, triggerElem, number) {
 
   // // handle property name variants and render
   // sur.textContent = fam.surname + " Family";
-   
+
   //add extended partner
-   // partner
+  // partner
   if (fam.partner) {
     const part = document.createElement("h4");
     part.id = "extPart-" + number;
@@ -399,24 +396,39 @@ function showExtension(fam, triggerElem, number) {
     wrapper.appendChild(ul);
   }
 
-   // insert the whole extension block right after the clicked element
+  // insert the whole extension block right after the clicked element
   triggerElem.insertAdjacentElement("afterend", wrapper);
 }
 
-
 //add parents
-function addParents(mat, pat, wholeWrapp){
-  const wrapper = document.createElement("div")
-  wrapper.className = "parent__wrapper"
-  const mother = document.createElement("h2")
-  mother.id = "m"
-  mother.className = "parent"
-  mother.textContent = mat
-  const father = document.createElement("h2")
-  father.className = "parent"
-  father.id = "f"
-  father.textContent = pat
-  wholeWrapp.appendChild(wrapper)
-  wrapper.appendChild(father)
- wrapper.appendChild(mother)
+function addParents(mat, pat, wholeWrapp) {
+  if (!wholeWrapp) {
+    const wrapper = document.createElement("div");
+    wrapper.className = "parent__wrapper";
+    const mother = document.createElement("h2");
+    mother.id = "m";
+    mother.className = "parent";
+    mother.textContent = mat;
+    const father = document.createElement("h2");
+    father.className = "parent";
+    father.id = "f";
+    father.textContent = pat;
+    document.body.appendChild(wrapper);
+    wrapper.appendChild(father);
+    wrapper.appendChild(mother);
+  } else {
+    const wrapper = document.createElement("div");
+    wrapper.className = "parent__wrapper";
+    const mother = document.createElement("h2");
+    mother.id = "m";
+    mother.className = "parent";
+    mother.textContent = mat;
+    const father = document.createElement("h2");
+    father.className = "parent";
+    father.id = "f";
+    father.textContent = pat;
+    wholeWrapp.appendChild(wrapper);
+    wrapper.appendChild(father);
+    wrapper.appendChild(mother);
+  }
 }
