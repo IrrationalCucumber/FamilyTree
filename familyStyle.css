@@ -116,3 +116,7 @@ nav:hover{
 .parent{
     border: 2px solid black;
 }
+
+.subFamily__wrapper{
+    border: 2px brown dashed;
+}
