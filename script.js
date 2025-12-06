@@ -33,7 +33,7 @@ const tree = {
             child: "Janessa",
             partner: "Clifford",
             surname: "Barrientos",
-            childred: ["ch1", "ch2", "ch3"],
+            children: ["ch1", "ch2", "ch3"],
           },
           {
             Extended: true,
