@@ -115,8 +115,18 @@ nav:hover{
 
 .parent{
     border: 2px solid black;
+    width: 50%;
+}
+
+.parent__wrapper{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .subFamily__wrapper{
     border: 2px brown dashed;
 }
+
+
