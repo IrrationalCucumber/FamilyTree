@@ -232,7 +232,7 @@ function myFunction(passedName) {
       surn.id = "see__fam";
       surn.textContent = "Go to " + tree.Potot.children[3].Surname + " Family";
       surn.addEventListener("click", () => goTo());
-      document.body.appendChild(surn);
+      wholeWrapp.appendChild(surn);
       //add childreneren
       //create funtion to add instead of static display
       //less bloat to script and html files
