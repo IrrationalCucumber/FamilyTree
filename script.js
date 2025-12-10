@@ -320,7 +320,6 @@ function goToFamily(fam) {
   } catch (error) {
     console.log(error);
   }
-  
 }
 
 function goTo() {
@@ -329,7 +328,8 @@ function goTo() {
 
 //funtion to add children if more than one
 function addchildren(num, children, ext, arr, wholeWrapp) {
-  const number = num; //num passed
+  try {
+    const number = num; //num passed
   const name = children; //name passed
   const e = ext; //if true: (child has extended family)
   const elemnt = document.createElement("h2"); // add elemnt
@@ -342,8 +342,11 @@ function addchildren(num, children, ext, arr, wholeWrapp) {
     elemnt.className = "child";
   }
   elemnt.id = "ch" + number; // assign id
-
   wholeWrapp.appendChild(elemnt);
+  } catch (error) {
+    console.log(error);
+  }
+  
 }
 
 function showExtension(fam, triggerElem, number, wholeWrapp) {
@@ -369,18 +372,6 @@ function showExtension(fam, triggerElem, number, wholeWrapp) {
   const sur = document.createElement("h3");
   sur.textContent = surnameText + " Family";
   wrapper.appendChild(sur);
-
-  // if (!sur) {
-  //   sur = document.createElement("h3");
-  //   sur.id = containerId;
-  //   // insert the surname element right after the clicked element
-  //   triggerElem.insertAdjacentElement("afterend", sur);
-  // }
-
-  // // handle property name variants and render
-  // sur.textContent = fam.surname + " Family";
-
-  //add extended partner
   // partner
   if (fam.partner) {
     const part = document.createElement("h4");
@@ -410,7 +401,7 @@ function showExtension(fam, triggerElem, number, wholeWrapp) {
 
 //add parents
 function addParents(mat, pat, wholeWrapp) {
-  
+  try{
     const wrapper = document.createElement("div");
     wrapper.className = "parent__wrapper";
     const mother = document.createElement("h2");
@@ -424,5 +415,9 @@ function addParents(mat, pat, wholeWrapp) {
     wholeWrapp.appendChild(wrapper);
     wrapper.appendChild(father);
     wrapper.appendChild(mother);
-  
+  }
+  catch(error){
+    console.log(error);
+    
+  }
 }
