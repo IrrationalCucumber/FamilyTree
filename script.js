@@ -312,10 +312,15 @@ function myFunction(passedName) {
 }
 
 function goToFamily(fam) {
-  const x = fam;
+  try {
+    const x = fam;
   // window.alert("vaiable: "+ x)
   document.location = "Family.html?fam=" + encodeURIComponent(x); //go to Family page
   // apply myFunction
+  } catch (error) {
+    console.log(error);
+  }
+  
 }
 
 function goTo() {
