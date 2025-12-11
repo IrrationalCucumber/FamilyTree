@@ -138,9 +138,11 @@ function myFunction(passedName) {
   var cLength;
 
   //wrapp content into div
+  document.getElementById("test")
   const wholeWrapp = document.createElement("div");
   wholeWrapp.className = "subFamily__wrapper";
-  document.body.append(wholeWrapp);
+  document.body.appendChild(wholeWrapp);
+  wholeWrapp.insertAdjacentElement("afterend", document.getElementById("gallery"))
 
   //alert(name);
   switch (name) {
