@@ -4,43 +4,45 @@ body {
   font-family: "lucida Handwriting";
 }
 
-li{
-    list-style-type: none;
+li {
+  list-style-type: none;
 }
 
-nav{
-    position: sticky;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 4rem;
-    background: blue;
-    border: 2px solid blue;
+nav {
+  position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  background: blue;
+  border: 2px solid blue;
 }
 
-nav:hover{
-    background: #ffff;
-    color: blue;
-    border: 2px solid blue;
+nav:hover {
+  background: #ffff;
+  color: blue;
+  border: 2px solid blue;
 }
 
-.family__banner {
-   display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    width: 70%;
-    margin: 1rem auto;
-    position: relative;
-    gap: 1rem;
+.family__banner,
+.album__banner {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 70%;
+  margin: 1rem auto;
+  position: relative;
+  gap: 1rem;
 }
 
-.family__banner__front {
+.family__banner__front,
+.banner__body {
   position: relative;
   display: flex;
   justify-content: center;
-    align-items: center;
-    flex: 1 1 auto;
-    z-index: 2;
+  align-items: center;
+  flex: 1 1 auto;
+  z-index: 2;
   margin: auto;
   width: 70%;
   border: 2px solid rgb(184, 134, 68);
@@ -52,82 +54,101 @@ nav:hover{
 
 /* BANNER RIGHT TAIL */
 
-.banner__tailsRight{
-    width: 15%;
-    z-index: 1;
-     
+.banner__tailsRight {
+  width: 15%;
+  z-index: 1;
 }
 
 .banner__tailsRightLow,
-.banner__tailsRightUp{
-    min-width: 48px;
-    height: 3rem;
-    background: burlywood; 
+.banner__tailsRightUp {
+  min-width: 48px;
+  height: 3rem;
+  background: burlywood;
 }
 
-.banner__tailsRightLow{
-    border-bottom: 2px solid rgb(184, 134, 68);
-    border-right: 2px solid rgb(184, 134, 68);
-    clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%);
+.banner__tailsRightLow {
+  border-bottom: 2px solid rgb(184, 134, 68);
+  border-right: 2px solid rgb(184, 134, 68);
+  clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%);
 }
 
-.banner__tailsRightUp{
-    border-top: 2px solid rgb(184, 134, 68);
-    border-right: 2px solid rgb(184, 134, 68);
-    clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
+.banner__tailsRightUp {
+  border-top: 2px solid rgb(184, 134, 68);
+  border-right: 2px solid rgb(184, 134, 68);
+  clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
 }
 
 /* BANNER LEFT TAIL */
 
-.banner__tailLeft{
-    z-index: 1;
-    margin-right: -2rem;
-    width: 15%;
+.banner__tailLeft {
+  z-index: 1;
+  margin-right: -2rem;
+  width: 15%;
 }
 
 .banner__tailsLeftLow,
-.banner__tailsLeftUp{
-    min-width: 48px;
-    height: 3rem;
-    background: burlywood;   
+.banner__tailsLeftUp {
+  min-width: 48px;
+  height: 3rem;
+  background: burlywood;
 }
 
-.banner__tailsLeftLow{
-    border-bottom: 2px solid rgb(184, 134, 68);
-    border-left: 2px solid rgb(184, 134, 68);
-    clip-path: polygon(35% 0, 100% 0, 100% 100%, 0% 100%);
+.banner__tailsLeftLow {
+  border-bottom: 2px solid rgb(184, 134, 68);
+  border-left: 2px solid rgb(184, 134, 68);
+  clip-path: polygon(35% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
-.banner__tailsLeftUp{
-    border-top: 2px solid rgb(184, 134, 68);
-    border-left: 2px solid rgb(184, 134, 68);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 35% 100%);
+.banner__tailsLeftUp {
+  border-top: 2px solid rgb(184, 134, 68);
+  border-left: 2px solid rgb(184, 134, 68);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 35% 100%);
 }
 
 /* overlap so they look attached */
 /* .banner__tailsLeftLow, .banner__tailsLeftUp{ margin-right: -2rem; } */
-.banner__tailsRight{ margin-left: -2rem; }
-
-
-.child{
-    border: 2px solid green;
+.banner__tailsRight {
+  margin-left: -2rem;
 }
 
-.parent{
-    border: 2px solid black;
-    width: 50%;
+.child {
+  border: 2px solid green;
 }
 
-.parent__wrapper{
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    justify-content: center;
+.parent {
+  border: 2px solid black;
+  width: 50%;
 }
 
-.subFamily__wrapper{
-    border: 2px brown dashed;
-    height: 24rem;
+.parent__wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
 }
 
+.subFamily__wrapper {
+  border: 2px brown dashed;
+  height: 24rem;
+}
 
+.banner__left,
+.banner__right{
+    min-width: 48px;
+    height: 6rem;
+    background: burlywood;
+}
+
+/* BANNER LEFT */
+
+.banner__left {
+  z-index: 1;
+  margin-right: -2rem;
+  width: 15%;
+}
+
+.banner__right {
+  width: 15%;
+  z-index: 1;
+  margin-left: -2rem;
+}
