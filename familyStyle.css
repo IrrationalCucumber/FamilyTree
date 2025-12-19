@@ -137,6 +137,7 @@ nav:hover {
     min-width: 48px;
     height: 6rem;
     background: burlywood;
+    border: 2px solid rgb(184, 134, 68);
 }
 
 /* BANNER LEFT */
@@ -145,10 +146,12 @@ nav:hover {
   z-index: 1;
   margin-right: -2rem;
   width: 15%;
+  clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%);
 }
 
 .banner__right {
   width: 15%;
   z-index: 1;
   margin-left: -2rem;
+  clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
 }
