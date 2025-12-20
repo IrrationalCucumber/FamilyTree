@@ -246,3 +246,52 @@ body{
   }
     
 }
+/* BANNER  */
+
+.album__banner {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 70%;
+  margin: 1rem auto;
+  position: relative;
+  gap: 1rem;
+}
+
+.banner__body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 auto;
+  z-index: 2;
+  margin: auto;
+  width: 70%;
+  border: 2px solid rgb(184, 134, 68);
+  border-radius: 12px 12px;
+  padding: 4px 2px;
+  background: burlywood;
+  height: 6rem;
+}
+
+.banner__left,
+.banner__right{
+    min-width: 48px;
+    height: 6rem;
+    background: burlywood;
+    border: 2px solid rgb(184, 134, 68);
+}
+
+.banner__left {
+  z-index: 1;
+  margin-right: -2rem;
+  width: 15%;
+  clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%);
+}
+
+.banner__right {
+  width: 15%;
+  z-index: 1;
+  margin-left: -2rem;
+  clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+}
