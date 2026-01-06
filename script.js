@@ -12,13 +12,36 @@ const tree = {
         Father: "Benjamin Jr",
         Mother: "Maria F",
         children: [
-          "Marvin",
-          "Rowen",
-          "Lauren",
-          "Jennelyn",
+          {
+            Extended: true,
+            child: "Marvin",
+            partner: "",
+          },
+          {
+            Extended: true,
+            child: "Rowen",
+            partner: "",//mona
+            children: ["ch1", "ch2"]
+          },
+          {
+            Extended: true,
+            child: "Lauren",
+            partner: "",
+          },
+          {
+            Extended: true,
+            child: "Jennelyn",
+            partner: "J",//jekyl
+            children: ["ch1"]
+          },
           "Kevin",
           "Franklin",
-          "Mauren",
+          {
+            Extended: true,
+            child: "Mauren",
+            partner: "",//john
+            children: ["ch1", "ch2"]
+          },
           "Lialyn",
           "Lovelyn",
         ],
